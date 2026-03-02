@@ -1,0 +1,27 @@
+# Copy to config.yaml and fill in your values
+
+# Slack - get from api.slack.com/apps after installing
+# Or use env: SLACK_BOT_TOKEN, SLACK_APP_TOKEN (for Socket Mode)
+# slack:
+#   botToken: xoxb-...
+#   appToken: xapp-...
+
+# Dev list - emails (bot resolves to Slack user IDs)
+devs:
+  - alice@company.com
+  - bob@company.com
+
+# Channel where daily summary is posted (invite bot first: /invite @BotName)
+summaryChannel: "#daily-updates"
+
+# Schedule (times in config timezone)
+timezone: "Asia/Kolkata"
+askTime: "19:00"      # 7 PM Mon-Fri
+onTimeCutoff: "10:50" # 10:50 AM - on-time vs late
+postTime: "11:00"     # 11 AM - when to post
+
+# Questions (2-3)
+questions:
+  - "What progress did you make last working day?"
+  - "What progress are you going to make today?"
+  - "Please mention blockers if you were facing any?"

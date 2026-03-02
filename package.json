@@ -1,0 +1,22 @@
+{
+  "name": "gp-bot",
+  "version": "1.0.0",
+  "description": "Slack bot for daily dev updates: 7 PM ask, 11 AM post (next working day)",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "clear-db": "node scripts/clear-db.js",
+    "run-evening": "node scripts/run-evening.js",
+    "run-post": "node scripts/run-post.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.17.0",
+    "dotenv": "^16.4.5",
+    "better-sqlite3": "^11.6.0",
+    "luxon": "^3.5.0",
+    "node-cron": "^3.0.3",
+    "yaml": "^2.4.2"
+  }
+}
