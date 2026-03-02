@@ -2,7 +2,9 @@ import Database from "better-sqlite3";
 import { resolve } from "path";
 import { existsSync, mkdirSync } from "fs";
 
-const dataDir = resolve(process.cwd(), "data");
+const dataDir = process.env.DATA_DIR
+  ? resolve(process.env.DATA_DIR)
+  : resolve(process.cwd(), "data");
 if (!existsSync(dataDir)) {
   mkdirSync(dataDir, { recursive: true });
 }
